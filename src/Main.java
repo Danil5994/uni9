@@ -14,12 +14,18 @@ public class Main {
         System.out.println("Сумма трат за месяц составила "+ sum  +" рублей");
 
         System.out.println();
-        System.out.println("задача 2");
-        int[] salary2 = {450, 7000, 10395, 6450, 500};
-       int min = Arrays.stream(salary2).min().getAsInt();
-       int max = Arrays.stream(salary2).max().getAsInt();
-        System.out.println("Минимальная сумма трат за неделю составила "+ min +" рублей. Максимальная сумма трат за неделю составила "+max+" рублей");
-        System.out.println();
+        int[] weeklyExpenses = {200, 4000, 1250, 7200, 250};
+        int min = weeklyExpenses[0];
+        int max = weeklyExpenses[0];
+        for (int expense : weeklyExpenses) {
+            if (expense < min) {
+                min = expense;
+            }
+            if (expense > max) {
+                max = expense;
+            }
+        }
+        System.out.println("Минимальная сумма трат за неделю составила "+ min +" рублей. Максимальная сумма трат за неделю составила " + max + "рублей");
         System.out.println("задача 3");
 
         double[] sum2 = {300, 345 , 4780, 5500, 1850};
